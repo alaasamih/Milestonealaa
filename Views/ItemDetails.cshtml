@@ -1,0 +1,8 @@
+﻿<h1>@Html.Sitecore().Field("Title")</h1>
+<div id="Translation">
+    @Html.Sitecore().Field("Thumbnail", new { @class = "img-responsive" })
+    @Html.Sitecore().Field("Description")
+    @Html.Sitecore().BeginField("Link", new { @class = "btn btn-primary" })
+    @Html.Sitecore().EndField()
+    <hr>
+</div>
