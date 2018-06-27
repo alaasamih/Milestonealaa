@@ -1,0 +1,15 @@
+﻿@if (Model == null)
+{
+    return;
+}
+<div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+        @foreach (var menuEntry in Model)
+        {
+            <li class="@(menuEntry.Children == null ? "active" : string.Empty)">
+                @Html.Sitecore().BeginField("Destination", menuEntry.item, new { haschildren = false })
+                @Html.Sitecore().EndField()
+            </li>
+        }
+    </ul>
+</div>
