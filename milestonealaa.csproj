@@ -170,7 +170,6 @@
     <Content Include="App_Config\Include\Foundation\milestonalaa.foundatin.serialzation.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Header.cshtml" />
