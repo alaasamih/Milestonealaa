@@ -238,6 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Release\" />
     <Folder Include="Views\HomeIntro\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
