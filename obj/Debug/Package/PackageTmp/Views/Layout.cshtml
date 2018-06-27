@@ -1,0 +1,41 @@
+﻿@using Sitecore.Data.Items
+
+@*@{
+    Layout = "~/Views/_Layout.cshtml";
+}*@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Training</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .vert {
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .subvert {
+            float: none !important;
+            font-weight: 300;
+            margin-left: 20px;
+        }
+
+        .navbar-default {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    @Html.Sitecore().Placeholder("top")
+
+    @Html.Sitecore().Placeholder("main")
+    @Html.Sitecore().Placeholder("form")
+    <footer class="container-fluid text-center">
+        @Html.Sitecore().Placeholder("footer")
+    </footer>
+</body>
+</html>
