@@ -1,0 +1,16 @@
+﻿@using Sitecore.Mvc
+@using System.Web.Optimization
+@using Sitecore.Mvc.Analytics.Extensions
+<!doctype html>
+<html>
+<head>
+    @Html.Sitecore().Placeholder("form")
+    <title>@Html.Sitecore().CurrentItem.DisplayName</title>
+</head>
+<body>
+    <div class="container">
+        @RenderBody()
+       
+    </div>
+</body>
+</html>

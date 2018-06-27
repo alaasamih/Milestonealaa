@@ -19,7 +19,7 @@ namespace Tanasuk.Controllers
             if (!string.IsNullOrWhiteSpace(datasource))
             {
                 var datasourceItem = Sitecore.Context.Database.GetItem(datasource);
-                list = datasourceItem.GetChildren()./*Where(o => FiletrItem(o)).*/Select(o => new NavigationMenuItem { item = o, Title = o["Title"], Children = GetChildren(o) });
+                list = datasourceItem.GetChildren().Where(o => FiletrItem(o)).Select(o => new NavigationMenuItem { item = o, Title = o["Title"], Children = GetChildren(o) });
             }
             return View("/Views/SideNavigation.cshtml", list);
         }
@@ -32,7 +32,7 @@ namespace Tanasuk.Controllers
             if (!string.IsNullOrWhiteSpace(datasource))
             {
                 var datasourceItem = Sitecore.Context.Database.GetItem(datasource);
-                list = datasourceItem.GetChildren()./*Where(o => FiletrItem(o)).*/Select(o => new NavigationMenuItem { item = o, Title = o["Title"] });
+                list = datasourceItem.GetChildren().Where(o => FiletrItem(o)).Select(o => new NavigationMenuItem { item = o, Title = o["Title"] });
             }
             return View("/Views/Header.cshtml", list);
         }
