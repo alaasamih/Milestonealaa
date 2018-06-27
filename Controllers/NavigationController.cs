@@ -13,15 +13,15 @@ namespace Tanasuk.Controllers
     {
         public ActionResult SideNavigation()
         {
-            var datasource = RenderingContext.CurrentOrNull.Rendering.DataSource;
-            IEnumerable<NavigationMenuItem> list = null;
+            //var datasource = RenderingContext.CurrentOrNull.Rendering.DataSource;
+            //IEnumerable<NavigationMenuItem> list = null;
 
-            if (!string.IsNullOrWhiteSpace(datasource))
-            {
-                var datasourceItem = Sitecore.Context.Database.GetItem(datasource);
-                list = datasourceItem.GetChildren()/*.Where(o => FiletrItem(o))*/.Select(o => new NavigationMenuItem { item = o, Title = o["Title"], Children = GetChildren(o) });
-            }
-            return View("/Views/SideNavigation.cshtml", list);
+            //if (!string.IsNullOrWhiteSpace(datasource))
+            //{
+            //    var datasourceItem = Sitecore.Context.Database.GetItem(datasource);
+            //    list = datasourceItem.GetChildren()/*.Where(o => FiletrItem(o))*/.Select(o => new NavigationMenuItem { item = o, Title = o["Title"], Children = GetChildren(o) });
+            //}
+            return View("/Views/SideNavigation.cshtml");
         }
 
         public ActionResult Header()

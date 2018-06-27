@@ -1,29 +1,32 @@
 ﻿@using Sitecore.Mvc.Presentation
-
-@if (Model == null)
-{
-    return;
-}
+@using Sitecore.Mvc
+@using Sitecore.Data.Items;
+@using Sitecore.Data.Fields;
+@model RenderingModel
 @{
-    var current = RenderingContext.CurrentOrNull.ContextItem;
+
 
     <ul class="nav navbar-nav">
-        @foreach (var navItem in Model)
+        @foreach (Item navItem in Model.Item.Children)
         {
-            <li class="vert @(navItem.Children == null  ? "active" : string.Empty)">
-                @Html.Sitecore().BeginField("Destination", navItem.item, new { haschildren = false })
+            LinkField linkfield = navItem.Fields["Destination"];
+            <li class="vert @(linkfield.TargetID.ToString() == Sitecore.Context.Item.ID.ToString()   ? "active" : string.Empty)">
+                @Html.Sitecore().BeginField("Destination", navItem, new { haschildren = false })
                 @Html.Sitecore().EndField()
                 @if (navItem.Children.Count > 0)
                 {
                     <ul class="nav navbar-nav">
-                        @foreach (var subNav in navItem.Children)
-                        {
-                            <li class="subvert @(subNav.Children == null  ? "vert" : string.Empty)">@Html.Sitecore().BeginField("Destination", subNav.item, new { haschildren = false })@Html.Sitecore().EndField()</li>
-                        }
-                    </ul>
-                }
-            </li>
+                @foreach (Item subNav in navItem.Children)
+                {
+                    LinkField sublinkfield = navItem.Fields["Destination"];
+                <li class="subvert @(sublinkfield.TargetID.ToString() == Sitecore.Context.Item.ID.ToString()   ? "active" : string.Empty)">
+                    @Html.Sitecore().BeginField("Destination", subNav, new { haschildren = false })@Html.Sitecore().EndField()
+                </li>
+            }
+            </ul>
         }
+        </li>
+}
     </ul>
 
 }

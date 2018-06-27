@@ -106,10 +106,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/27/2018 10:41:14</publishTime>
     </File>
     <File Include="bin/milestonealaa.dll">
-      <publishTime>06/27/2018 10:52:50</publishTime>
+      <publishTime>06/27/2018 12:33:09</publishTime>
     </File>
     <File Include="bin/milestonealaa.pdb">
-      <publishTime>06/27/2018 10:52:50</publishTime>
+      <publishTime>06/27/2018 12:33:09</publishTime>
     </File>
     <File Include="bin/MSCaptcha.dll">
       <publishTime>06/27/2018 10:41:14</publishTime>
@@ -598,7 +598,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/27/2018 10:41:14</publishTime>
     </File>
     <File Include="Views/Header.cshtml">
-      <publishTime>06/27/2018 10:47:57</publishTime>
+      <publishTime>06/27/2018 12:10:30</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>06/12/2018 12:49:14</publishTime>
@@ -613,7 +613,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/27/2018 10:41:14</publishTime>
     </File>
     <File Include="Views/Layout.cshtml">
-      <publishTime>06/27/2018 10:41:14</publishTime>
+      <publishTime>06/27/2018 12:10:30</publishTime>
     </File>
     <File Include="Views/Logo.cshtml">
       <publishTime>06/27/2018 10:41:14</publishTime>
@@ -628,7 +628,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/12/2018 12:49:14</publishTime>
     </File>
     <File Include="Views/SideNavigation.cshtml">
-      <publishTime>06/27/2018 10:41:14</publishTime>
+      <publishTime>06/27/2018 12:48:27</publishTime>
     </File>
     <File Include="Views/TwoColumn.cshtml">
       <publishTime>06/27/2018 10:41:14</publishTime>
